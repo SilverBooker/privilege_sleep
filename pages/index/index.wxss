@@ -1,0 +1,122 @@
+@import '../../components/mystar/mystar.wxss';
+@import '../../components/storeitem/storeitem.wxss';
+/**index.wxss**/
+
+.container{
+  height: auto;
+
+}
+.container .search{
+  width: 735rpx;
+  height: 65rpx;
+  padding: 12.5rpx 0 12.5rpx 15rpx;
+  background: #CC0033;
+}
+.container .search-left{
+  flex: 8;
+  background: #CC6666;
+  text-align: left;
+}
+.container .search-left input{
+  display: inline-block;
+  height: 65rpx;
+  font-size: 26rpx;
+}
+.search-placeholder{
+  color: #8CCEFD;
+  line-height: 20rpx;
+}
+.container .search .search-left image{
+  display: inline-block;
+  width: 35rpx;
+  height: 35rpx;
+  padding: 15rpx 15rpx 15rpx 20rpx;
+}
+.container .search .search-right{
+  flex: 1;
+}
+.container .search .search-right image{
+  width: 45rpx;
+  height: 45rpx;
+  padding: 10rpx;
+}
+
+.container{
+  padding: 0;
+  font-size: 14rpx;
+  background: #F0F4F3;
+  color: #000;
+}
+/*feed-item part is in app.wxss for multiplexing*/
+
+
+
+
+
+
+.navbtns{
+    display: flex;
+    height: 80rpx;
+    width: 100%; 
+    flex-wrap: nowrap;
+    flex-direction: row;
+    align-items: center;
+    background-color: #ffffff;
+}
+
+.navbtns .navitem{
+    flex: 1;
+    text-align: center;
+    color: #777777;
+    font-size: 26rpx;
+    height: 80rpx;
+    line-height: 80rpx;
+}
+.navbtns .navitem image{
+    display: inline-block;
+    width: 26rpx;
+    height: 26rpx;
+    margin-left: 6rpx;
+    vertical-align: middle;
+}
+
+.navbtns .line{
+width: 3rpx;
+background-color: #aaaaaa;
+height: 45rpx;
+flex-shrink: 0;
+}
+
+.wrap{
+    position: relative;
+}
+
+.wrap .spinner{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .6);
+    z-index: 1;
+    top: 0;
+    left: 0;
+}
+
+.wrap .spinner .items{
+    background-color: #fff;
+    padding-left: 20rpx;
+}
+
+.wrap .spinner .items .item{
+   padding-left: 25rpx;
+border-bottom: 1rpx solid #777777;
+height: 90rpx;
+line-height: 90rpx;
+color: #333;
+font-size: 30rpx;
+
+}
+
+
+.scroller{
+    margin-top: -5rpx;
+}

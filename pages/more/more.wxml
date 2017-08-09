@@ -1,0 +1,40 @@
+<view class="container more">
+  <view class="user flex-wrp">
+    <view class="avatar flex-item">
+      <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+    </view>
+    <view class="user-info flex-item">
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+      <text class="edit"></text>
+    </view>
+  </view>
+
+  <view class="my">
+    <view class="my-item flex-wrp">
+      <view class="myitem-icon flex-item">
+        <image src="../../images/index.png"></image>
+      </view>
+      <view class="myitem-name flex-item" bindtap='orderlistclick'>
+        <text>返利订单</text>
+      </view>
+    </view>
+
+    <view class="my-item flex-wrp">
+      <view class="myitem-icon flex-item">
+        <image src="../../images/ic_purse.png"></image>
+      </view>
+      <view class="myitem-name flex-item">
+        <text>我的钱包</text>
+      </view>
+    </view>
+
+    <view class="my-item flex-wrp">
+      <view class="myitem-icon flex-item">
+        <image src="../../images/sao.png"></image>
+      </view>
+      <view class="myitem-name flex-item" bindtap='codeclick'>
+        <text>扫一扫</text>
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,20 @@
+<import src='../../components/star/star.wxml' />
+<template name='store'>
+  <navigator url="../../pages/store/store?id={{store.id}}" hover-class="navigator-hover">
+    <view class='store'>
+      <image src="{{store.photo}}" mode="aspectFill"></image>
+      <view class='info'>
+        <view class='name'>{{store.name}}</view>
+        <view class='star_price'>
+          <template is='star' data="{{count:store.star}}" /> {{store.price}}
+        </view>
+        <view class='type_km'>
+          <view class='type'>
+            <text>{{store.buztype}}</text>
+          </view>
+          <view class='km'>{{store.km}}</view>
+        </view>
+      </view>
+    </view>
+    </navigator>
+</template>

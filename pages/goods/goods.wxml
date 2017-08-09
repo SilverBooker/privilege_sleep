@@ -1,0 +1,69 @@
+<import src='../../components/star/star.wxml' />
+<import src='../../components/comment/comment.wxml' />
+<view>
+  <view class='top'>
+    <swiper class='banners' indicator-dots="true" autoplay="true" interval="4000" duration="1000" indicator-color="#60ffffff" indicator-active-color="#fff">
+      <block>
+
+        <image src="{{goods.gphoto}}" class="banner" mode="aspectFill" bindtap='banner' data-index='{{index}}'></image>
+      </block>
+    </swiper>
+    <view class='marsk'></view>
+    <view class='info'>
+      <view class='name'>{{goods.gname}}</view>
+      <view class='dec'>{{goods.describe}}</view>
+    </view>
+  </view>
+  <view class='services'>
+    <view class='serve'>
+      <block wx:for='{{goods.service}}' wx:key='item'>
+        <view class='service'>
+          <icon type="success_circle" color="#65c07a" size="16"></icon>{{item}}</view>
+      </block>
+    </view>
+    <view class='selled'>
+      <icon type="success_circle" color="#999999" size="16"></icon>已售{{goods.selled}}</view>
+  </view>
+
+  <view class='store'>
+    <view class='title'>适用商户</view>
+    <view class='storeinfo'>
+      <view class='storemain'>
+        <view class='name'>{{store.name}}</view>
+        <view class='km'>
+          <template is='star' data="{{count:store.star}}"></template>
+          <view class='distance'>{{store.km}}</view>
+        </view>
+      </view>
+      <view class='verticalline'></view>
+      <image src="../../images/phone_orange.png" class='call' bindtap='callPhone'></image>
+    </view>
+    <view class='location' bindtap='location'>
+      <image src="../../images/position.png" mode="aspectFill" class='icon'></image>
+      <view class='info'>{{store.address}}</view>
+      <image src="../../images/arrow_left.png" class='arrow_left'></image>
+    </view>
+  </view>
+
+  <view class='grounp border_top_bottom'>
+    <view class='title'>返利购详情</view>
+    <block wx:for='{{goods.group.goods}}' wx:for-item='good' wx:key='good.id'>
+      <view class='grounp_item'>
+        <view class='name'>{{good.name}}</view>
+        <view class='count'>{{good.count}}</view>
+        <view class='value'>{{good.value}}</view>
+      </view>
+    </block>
+
+    <view class='describe'>
+      <text>{{goods.describe}}</text>
+    </view>
+  </view>
+
+
+</view>
+<view class='buy'>
+  <view class='price'>￥{{goods.gprice}} 返 ￥{{goods.goldprice}}</view>
+  <view class='oldprice'></view>
+  <view class='gobuy' bindtap='gobuy'>立即抢购</view>
+</view>
