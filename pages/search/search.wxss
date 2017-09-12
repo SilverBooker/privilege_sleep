@@ -6,18 +6,18 @@
   height: auto;
 
 }
-.search{
+.container .search{
   width: 735rpx;
   height: 65rpx;
   padding: 12.5rpx 0 12.5rpx 15rpx;
   background: #CC0033;
   position: relative;
 }
-.search-left{
+.container .search-left{
   background: #CC6666;
   text-align: left;
 }
-.search-left input{
+.container .search-left input{
   width: 630rpx;
   height: 65rpx;
   font-size: 26rpx;
@@ -26,20 +26,20 @@
   color: #8CCEFD;
   line-height: 20rpx;
 }
-.search .search-left image{
+.container .search .search-left image{
   display: inline-block;
   width: 35rpx;
   height: 35rpx;
   padding: 15rpx 15rpx 15rpx 20rpx;
 }
-.search .search-right{
+.container .search .search-right{
   position: absolute;
 right: 10rpx;
     width: 65rpx;
   height: 65rpx;
   background: #CC0033;
 }
- .search .search-right image{
+.container .search .search-right image{
   position: absolute;
   right: 10rpx;
   width: 55rpx;
@@ -53,12 +53,6 @@ right: 10rpx;
   color: #000;
 }
 /*feed-item part is in app.wxss for multiplexing*/
-
-
-
-
-
-
 .navbtns{
     display: flex;
     height: 80rpx;
@@ -120,8 +114,15 @@ color: #333;
 font-size: 30rpx;
 
 }
-
-
 .scroller{
     margin-top: -5rpx;
+}
+.address-add {
+
+    position: fixed;
+
+    bottom: 0;
+
+    width: 100%;
+
 }

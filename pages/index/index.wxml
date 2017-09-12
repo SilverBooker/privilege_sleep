@@ -1,23 +1,27 @@
 <import src='../../components/star/star.wxml' />
 <import src='../../components/storeitem/storeitem.wxml' />
 <!--index.wxml-->
-<view class="container">
+  <form bindsubmit="formSubmit">
   <view class="search flex-wrp">
-    <view class="search-left flex-item">
-      <image src="../../images/search.png"></image>
-      <input placeholder="搜索酒店" placeholder-class="search-placeholder" />
+
+    <view class="search-left ">
+      <input placeholder="搜索酒店" placeholder-class="search-placeholder" name="searchname"/>
     </view>
-    <view class="search-right flex-item" bindtap="upper">
+    <button class="search-right "  formType="submit">
       <image src="../../images/lighting.png"></image>
-    </view>
+      </button>
+   
   </view>
+   </form>
+<view     class="container">
+
   <loading hidden="{{!loading}}">
     {{title}}
   </loading>
 
 
 
-    <scroll-view class='scroller' style="width:{{width}}px;" bindscrolltoupper="upper" scroll-y="true" lower-threshold="800" >
+    <scroll-view   class='scroller' style="width:{{width}}px;" bindscrolltoupper="upper" scroll-y="true" lower-threshold="800" >
       <view wx:for='{{storelist}}' wx:for-item='store' wx:key='*this'>
         <template is="store" data="{{store}}" />
       </view>

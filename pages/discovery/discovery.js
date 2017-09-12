@@ -1,14 +1,12 @@
 //discovery.js
 var util = require('../../utils/util.js')
+var app = getApp();
+var touchDot = 0;//触摸时的原点 
+var time = 0;// 时间记录，用于滑动时且时间小于1s则执行左右滑动 
+var interval = "";// 记录/清理时间记录 
 Page({
   data: {
-    navTab: ["推荐", "预留", "预留", "预留"],
-    currentNavtab: "0",
-    imgUrls: [
-      '../../images/24213.jpg',
-      '../../images/24280.jpg',
-      '../../images/1444983318907-_DSC1826.jpg'
-    ],
+    imgUrls:[],
     indicatorDots: false,
     autoplay: true,
     interval: 5000,
@@ -21,6 +19,23 @@ Page({
     onLoad: function () {
       console.log('onLoad')
       var that = this
+      getApp().getUserInfo(function (userInfo) {
+        //更新数据
+        that.setData({
+          userInfo: userInfo
+        })
+      }),
+      wx.request({
+        url: getApp().globalData.url + 'addon/SlideShow/SlideShow/getSlideShow',
+        data: {},
+        header: { 'Content-Type': 'application/json' },
+        success: function (res) {
+          console.log(res.data)
+          that.setData({
+            imgUrls: res.data
+          })
+        }
+      }),
       wx.request({
         url: 'https://ygocore.cn/weicms/index.php?s=/addon/GoodList/GoodList/getList',
         data: {},
@@ -31,7 +46,7 @@ Page({
             goods: res.data
           })
         }
-      })
+      })      
     },
     onPullDownRefresh: function () {
       // Do something when pull down.
@@ -40,4 +55,5 @@ Page({
       this.onLoad();
 
     },
+    
 })

@@ -1,41 +1,50 @@
 {
-  "pages":[
+  "pages": [
     "pages/discovery/discovery",
     "pages/store/store",
     "pages/index/index",
     "pages/goods/goods",
     "pages/more/more",
     "pages/order-list/order-list",
-    "pages/scancode/scancode"
+    "pages/purse/purse",
+    "pages/to-pay-order/index",
+    "pages/after/after",
+    "pages/scan-list/scan-list",
+    "pages/search/search",
+    "pages/idcard/idcard"
   ],
-  "window":{
-    "backgroundTextStyle":"light",
+  "window": {
+    "backgroundTextStyle": "",
     "navigationBarBackgroundColor": "#CC0033",
-    "navigationBarTitleText": "惠返酒店促销",
-    "navigationBarTextStyle":"white",
-    "enablePullDownRefresh":true
+    "navigationBarTitleText": "惠眠酒店促销",
+    "navigationBarTextStyle": "white",
+    "enablePullDownRefresh": true
   },
   "tabBar": {
     "color": "#626567",
     "selectedColor": "#CC0033",
     "backgroundColor": "#FBFBFB",
     "borderStyle": "white",
-    "list": [{
-      "pagePath": "pages/index/index",
-      "text": "品牌特卖",
-      "iconPath": "images/star.png",
-      "selectedIconPath": "images/star_focus.png"
-    }, {
-      "pagePath": "pages/discovery/discovery",
-      "text": "限时返利",
-      "iconPath": "images/discovery.png",
-      "selectedIconPath": "images/discovery_focus.png"
-    },  {
-      "pagePath": "pages/more/more",
-      "text": "我的",
-      "iconPath": "images/burger.png",
-      "selectedIconPath": "images/burger_focus.png"
-    }]
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "品牌特卖",
+        "iconPath": "images/star.png",
+        "selectedIconPath": "images/star_focus.png"
+      },
+      {
+        "pagePath": "pages/discovery/discovery",
+        "text": "精品返利",
+        "iconPath": "images/discovery.png",
+        "selectedIconPath": "images/discovery_focus.png"
+      },
+      {
+        "pagePath": "pages/more/more",
+        "text": "我的",
+        "iconPath": "images/burger.png",
+        "selectedIconPath": "images/burger_focus.png"
+      }
+    ]
   },
   "networkTimeout": {
     "request": 10000,

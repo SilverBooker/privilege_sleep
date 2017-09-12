@@ -1,0 +1,40 @@
+<view class="container">
+    <!-- <view class="status-box">
+        <view bindtap="statusTap" class="status-label {{index == currentTpye ? 'active' : ''}}" wx:for-items="{{statusType}}" wx:key="{{index}}" data-index="{{index}}">
+            {{item}}
+              <view class="{{tabClass[index]}}" wx:if="{{index!=0}}"></view>  
+        </view>
+    </view> -->
+     <view class="no-order" hidden="{{orderList? true : false}}">
+        <image src="/images/no-order.png" class="no-order-img"></image>
+        <view class="text">您暂无该店的返利订单</view>
+     </view>  
+    <view class="order-list" hidden="{{orderList.length ? false : true}}">
+        <view class="a-order" wx:for-items="{{orderList}}" wx:key="{{index}}">
+            <view class="order-date">
+                <view class="date-box">订单号：{{item.order_id}}</view>
+            </view> 
+            <view class="goods-info" bindtap="goodsDetail" data-id="{{item.spid}}" data-sdid="{{item.sdid}}">
+                        <view class="img-box">
+                        <image src="{{item.spphoto}}" class="goods-img"></image>
+                    </view> 
+                <view class="goods-des">
+                   <view>{{item.spname}} </view>
+                     <view>下单时间:{{item.create_time}}</view>  
+                     <view hidden="{{item.rebate_form==0? false : true}}">过期时间:{{item.past_date}}</view>
+                     <view hidden="{{item.rebate_form==1? false : true}}">验证时间:{{item.verity_time}}</view>
+                </view>
+            </view>
+            <view >
+            </view>
+            <view class="price-box">
+                <view class="total-price {{currentTpye==2 ? 'active' : ''}}" >预计返利：¥ {{item.rebate_amount}}</view>
+                <view class="btn topay-btn" hidden="{{item.rebate_form==1? false : true}}">审核中</view>
+            </view>  
+        </view>
+
+    </view>
+    <button bindtap="gotoindex" type="warn" class="address-add">
+      回到我的资料页
+    </button>
+</view>

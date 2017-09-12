@@ -1,0 +1,218 @@
+/* pages/purse/purse.wxss */@import '../../components/comment/comment.wxss';
+
+page{
+    background-color: #f0f0f0;
+}
+.container{
+  height: auto;
+}
+.top-tab{
+  width: 750rpx;
+  height: 100rpx;
+  background: #CC0033;
+  color: #8CCEFD;
+  font-size: 28rpx;
+  line-height: 100rpx;
+  box-shadow: 0 2px 2px #bebebe;
+  margin: 0 0 8rpx 0;
+  z-index: 9999;
+}
+
+.toptab.active{
+  color: #ffffff;
+  border-bottom: solid 2px #ffffff;
+}
+
+.money{
+  width:750rpx;
+  height:400rpx;
+  background:#CC0033;
+  line-height: 400rpx;
+  text-align: center;
+  color: #f0f0f0;
+  font-size: 75rpx;
+}
+.goods{
+    background-color: #fff;
+    margin-top: 24rpx;
+
+}
+
+.goods .good{
+margin-left: 10rpx;
+padding: 20rpx;
+display: flex;
+flex-direction: row;
+align-items: center;
+flex-wrap: nowrap;
+}
+.goods .good .photo{
+    width: 120rpx;
+    height: 120rpx;
+    flex-shrink: 0;
+}
+.goods .good .info{
+    flex: 1;
+    margin-left: 14rpx;
+}
+.goods .good .info .goodsname{
+    color: #111111;
+    font-size: 28rpx;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.goods .good .info .price{
+    color: #666666;
+    font-size: 25rpx;
+    margin-top: 26rpx;
+}
+.goods .good .info .price text{
+color: ff461f;
+font-size: 45rpx;
+
+}
+.goods .good .arrow_a{
+color: #01b468;
+font-size: 36rpx;
+    height: 30rpx;
+    line-height: 30rpx;
+    margin-top: 4rpx;
+    font-weight: bold;
+}
+.goods .good .arrow_b{
+color: #cc0033;
+font-size: 36rpx;
+    height: 30rpx;
+    line-height: 30rpx;
+    margin-top: 4rpx;
+    font-weight: bold;
+}
+
+.goods .border{
+    border-top: 3rpx solid #f0f0f0;
+}
+
+.goods .laa{
+     border-top: 3rpx solid #f0f0f0;
+     color: #111111;
+     font-size: 24rpx;
+     text-align: center;
+     height: 90rpx;
+     line-height: 90rpx;
+}
+
+.goods .laa image{
+    width: 26rpx;
+    height: 26rpx;
+margin-left: 6rpx;
+vertical-align: middle;
+}
+
+.formstyle{
+  width:750rpx;
+  height:800rpx;
+  background: #fff;
+  font-size: 40rpx;
+  color: #111111;
+  margin-top: 30rpx;
+  position: relative;
+}
+.input{
+  position: absolute;
+  background:#f0f0f0;
+  width: 590rpx;
+  height: 60rpx;
+    background: #fff;
+  border:none; 
+  border-bottom:1px solid red;
+    left: 80rpx;
+    top: 100rpx;
+}
+
+.name{
+  position: absolute;
+  background:#f0f0f0;
+  width: 590rpx;
+  height: 60rpx;
+    background: #fff;
+  border:none; 
+  border-bottom:1px solid red;
+    left: 80rpx;
+    top: 260rpx;
+}
+
+.realname{
+  position: absolute;
+  background:#f0f0f0;
+  width: 590rpx;
+  height: 60rpx;
+    background: #fff;
+  border:none; 
+  border-bottom:1px solid red;
+    left: 80rpx;
+    top: 420rpx;
+}
+
+.button_a{
+  position: absolute;
+   background:#CC0033;
+  width: 590rpx;
+  height: 50rpx;
+  top: 560rpx;
+  font-size: 40rpx;
+  color:#f0f0f0;
+  text-align: center;
+  line-height: 50rpx;
+  
+  margin-left: 80rpx;
+}
+.button_b{
+  position: absolute;
+   background:#CC0033;
+  width: 590rpx;
+  height: 50rpx;
+  top: 620rpx;
+  font-size: 40rpx;
+  color:#f0f0f0;
+  text-align: center;
+  line-height: 50rpx;
+  margin-left: 80rpx;
+}
+
+.button :active{
+
+   background:#8CCEFD;
+}
+.formstyle .tixian{
+  position: absolute;
+  top: 40rpx;
+  left: 40rpx;
+}
+
+.formstyle .tiname{
+  position: absolute;
+  top: 200rpx;
+  left: 40rpx;
+}
+
+.formstyle .tireal{
+  position: absolute;
+  top: 360rpx;
+  left: 40rpx;
+}
+.no-order{
+    width: 100%;
+    bottom: 0;
+    top: 88rpx;
+    text-align: center;
+    padding-top: 203rpx;
+    background-color: #F2f2f2;
+    font-size: 40rpx;
+}
+.no-order-img{
+    width: 81rpx;
+    height: 96rpx;
+    margin-bottom: 31rpx;
+}

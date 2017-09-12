@@ -1,35 +1,20 @@
 <!--logs.wxml-->
 <import src='../../components/star/star.wxml' />
 
-<view class="top-tab flex-wrp flex-tab ">
-  <view class="toptab flex-item {{currentNavtab==idx ? 'active' : ''}}" wx:for="{{navTab}}" wx:for-index="idx" wx:for-item="itemName" wx:key="unique" data-idx="{{idx}}" bindtap="switchTab">
-    {{itemName}}
-  </view>
-</view>
 
-<scroll-view scroll-y="true" class="container discovery withtab"   scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
-  <view class="ctnt0" hidden="{{currentNavtab==0 ? '' : true}}">
+
+
+  <view >
     <swiper class="activity" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
       <block wx:for="{{imgUrls}}" wx:key="unique">
         <swiper-item>
-          <image src="{{item}}" class="slide-image" width="355" height="155" />
+          <image src="{{item.photo}}" class="slide-image" width="355" height="155" />
         </swiper-item>
       </block>
     </swiper>
-
-
-  </view>
-  <view class="ctnt1" hidden="{{currentNavtab==1 ? '' : true}}">
-    <text>圆桌</text>
-  </view>
-  <view class="ctnt2" hidden="{{currentNavtab==2 ? '' : true}}">
-    <text>热门</text>
-  </view>
-  <view class="ctnt3" hidden="{{currentNavtab==3 ? '' : true}}">
-    <text>收藏</text>
   </view>
 
-  <view class='goods'>
+  <view class='goods' >
     <block wx:for="{{goods}}" wx:for-item="good" wx:key="good.id">
       <navigator url="../../pages/goods/goods?sdid={{good.sdid}}&id={{good.id}}" hover-class="navigator-hover">
         <view class="good {{index>0? 'border' : ''}}">
@@ -40,7 +25,7 @@
               <text>返 {{good.goldprice}}</text>
             </view>
           </view>
-          <view class='arrow'>已售{{good.selled}}
+          <view class='arrow'>
             <image src="../../images/arrow_left.png"></image>
           </view>
         </view>
@@ -48,4 +33,3 @@
     </block>
   </view>
 
-</scroll-view>

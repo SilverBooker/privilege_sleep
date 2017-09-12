@@ -10,7 +10,7 @@
         </view>
         <view class='type_km'>
           <view class='type'>
-            <text>{{store.buztype}}</text>
+            <text>{{store.address}}</text>
           </view>
           <view class='km'>{{store.km}}</view>
         </view>

@@ -1,8 +1,8 @@
 var app = getApp()
 Page({
   data: {
-    statusType: ["未使用", "待发放", "已发放"],
-    currentTpye: 0,
+    statusType: ["选择您在本店申请返利的订单"],
+    currentTpye: 1,
     orderList: [],
     tabClass: ["", "", ""],
   },
@@ -14,7 +14,7 @@ Page({
     //  this.onShow();
     this.onLoad();
   },
-  gotoindex:function(e){
+  gotoindex: function (e) {
     wx.reLaunch({
       url: '/pages/more/more',
     })
@@ -26,16 +26,17 @@ Page({
       url: "/pages/goods/goods?id=" + goodsId + "&sdid=" +sdId
     })
   },
-  onLoad: function () { 
+  onLoad: function () {
     var that = this;
     var token = wx.getStorageSync("openid");
     var status = that.data.currentTpye;
     var postData = {
       token: token,
-      status: status
+      status: status,
+      code: getApp().globalData.scancode
     };
     wx.request({
-      url: getApp().globalData.url + 'addon/OrderTable/OrderTable/getOrderList',
+      url: getApp().globalData.url + 'addon/OrderTable/OrderTable/getRebateList',
       method: 'POST',
       header: {
         'content-type': 'application/x-www-form-urlencoded'
@@ -51,6 +52,7 @@ Page({
     // console.log("length:",that.data.orderList.length);
   },
   onPullDownRefresh: function () {
+    // Do something when pull down.
     wx.stopPullDownRefresh();
     console.log('刷新');
     this.onLoad();

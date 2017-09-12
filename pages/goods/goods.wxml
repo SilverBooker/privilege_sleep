@@ -22,14 +22,14 @@
       </block>
     </view>
     <view class='selled'>
-      <icon type="success_circle" color="#999999" size="16"></icon>已售{{goods.selled}}</view>
+      <icon type="success_circle" color="#999999" size="16"></icon>有效期：{{goods.life}}天</view>
   </view>
 
   <view class='store'>
     <view class='title'>适用商户</view>
     <view class='storeinfo'>
-      <view class='storemain'>
-        <view class='name'>{{store.name}}</view>
+      <view class='storemain' data-id="{{store.id}}" bindtap="storeDetail">
+        <view class='name' >{{store.name}}</view>
         <view class='km'>
           <template is='star' data="{{count:store.star}}"></template>
           <view class='distance'>{{store.km}}</view>
@@ -47,14 +47,6 @@
 
   <view class='grounp border_top_bottom'>
     <view class='title'>返利购详情</view>
-    <block wx:for='{{goods.group.goods}}' wx:for-item='good' wx:key='good.id'>
-      <view class='grounp_item'>
-        <view class='name'>{{good.name}}</view>
-        <view class='count'>{{good.count}}</view>
-        <view class='value'>{{good.value}}</view>
-      </view>
-    </block>
-
     <view class='describe'>
       <text>{{goods.describe}}</text>
     </view>
@@ -65,5 +57,5 @@
 <view class='buy'>
   <view class='price'>￥{{goods.gprice}} 返 ￥{{goods.goldprice}}</view>
   <view class='oldprice'></view>
-  <view class='gobuy' bindtap='gobuy'>立即抢购</view>
+  <view class='gobuy' id="{{goods.id}}" data-hi="{{goods.gname}}" bindtap='gobuy'>获得资格</view>
 </view>

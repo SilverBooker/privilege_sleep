@@ -56,7 +56,7 @@ Page({
       data: {id:options.id},
       header: { 'Content-Type': 'application/json' },
       success: function (res) {
-        console.log(res.data)
+        // console.log(res.data)
         that.setData({
           store:res.data
         })
@@ -67,7 +67,7 @@ Page({
       data: { sdid:options.id },
       header: { 'Content-Type': 'application/json' },
       success: function (res) {
-        console.log(res.data)
+        // console.log(res.data)
         that.setData({
           goods: res.data
         })
@@ -78,7 +78,7 @@ Page({
       data: { id: options.id },
       header: { 'Content-Type': 'application/json' },
       success: function (res) {
-        console.log(res.data)
+        // console.log(res.data)
         that.setData({
           xx: res.data,
         
@@ -91,7 +91,7 @@ Page({
       data: { id: options.id },
       header: { 'Content-Type': 'application/json' },
       success: function (res) {
-        console.log(res.data)
+        // console.log(res.data)
         that.setData({
           yy: res.data
         })

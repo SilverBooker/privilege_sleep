@@ -1,0 +1,59 @@
+<!--logs.wxml-->
+<import src='../../components/star/star.wxml' />
+
+<view class="top-tab flex-wrp flex-tab ">
+  <view class="toptab flex-item {{currentNavtab==idx ? 'active' : ''}}" wx:for="{{navTab}}" wx:for-index="idx" wx:for-item="itemName" wx:key="unique" data-idx="{{idx}}" bindtap="switchTab">
+    {{itemName}}
+  </view>
+</view>
+
+<scroll-view scroll-y="true" class="container discovery withtab"   scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
+<view class="money">
+<text>￥{{purseDetail.money}}</text>
+</view>
+  <view class="formstyle" hidden="{{currentNavtab==1 ? '' : true}}">
+
+  <form bindsubmit="formSubmit" bindreset="formReset">
+    <view class="tixian">提现金额:</view>
+  <input class="input" type="number" name="txmoney" confirm-type="next"/>
+      <view class="tiname">支付宝账户:</view>
+  <input class="name" type="text" name="txname" confirm-type="next"/>
+      <view class="tireal">真实姓名:</view>
+  <input class="realname" type="text" name="txrealname" confirm-type="done"/>
+  <button class="button_a" formType="submit">确定</button>
+  <button class="button_b" formType="reset">重置</button>
+  </form>
+  </view>
+
+
+  <view class='goods'  hidden="{{currentNavtab==0 ? '' : true}}">
+   <view wx:if="{{purse}}">
+    <block  wx:for="{{purse}}" wx:for-item="purse" wx:key="purse.id" >
+  
+        <view class="good {{index>0? 'border' : ''}}">
+          <view class='info'>
+          <view class='goodsname' wx:if="{{purse.spid}}">{{purse.spname}}</view>
+          <view class='goodsname' wx:else>
+          <text wx:if="{{purse.status==1}}">提现（已到账 请查收）</text>
+          <text wx:else>提现（未到账）</text>
+          </view>
+            <view class='price'>{{purse.time}}
+            </view>
+          </view>
+
+          <view class='arrow_a' wx:if="{{purse.spid}}">+￥{{purse.water}}
+          </view>
+          <view class='arrow_b' wx:else>-￥{{purse.water}}
+          </view>
+        </view>
+
+    </block> 
+    </view>
+     <view class="no-order"  wx:else>
+        <image src="/images/no-order.png" class="no-order-img"></image>
+        <view class="text">暂无账单</view>
+    </view> 
+
+  </view>
+
+</scroll-view>

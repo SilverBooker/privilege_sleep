@@ -1,0 +1,48 @@
+
+.formstyle{
+  width:750rpx;
+  height:800rpx;
+  background: #fff;
+  font-size: 40rpx;
+  color: #111111;
+  margin-top: 30rpx;
+  position: relative;
+}
+.formstyle .tixian{
+  position: absolute;
+  top: 100rpx;
+  height: 80rpx;
+  width: 750rpx;
+  line-height: 80rpx;
+  border:none;
+  border-bottom: 2rpx grey solid;
+  border-top: 2rpx grey solid;
+  font-size: 30rpx;
+
+}
+.button_a{
+  position: absolute;
+   background:#CC0033;
+  width: 590rpx;
+  height: 70rpx;
+  top: 560rpx;
+  font-size: 35rpx;
+  color:#f0f0f0;
+  text-align: center;
+  line-height: 70rpx;
+  
+  margin-left: 80rpx;
+}
+
+.idname{
+  position: absolute;
+  background:#f0f0f0;
+  width: 750rpx;
+  height: 80rpx;
+  background: #fff;
+  border:none;
+  border-bottom: 2rpx grey solid;
+  border-top: 2rpx grey solid;
+  font-size:30rpx; 
+  top: 220rpx;
+}

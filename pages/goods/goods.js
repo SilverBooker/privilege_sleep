@@ -18,10 +18,17 @@ Page({
 
   },
   gobuy(event) {
-    wx.showToast({
-      title: '功能未做',
-
-
+    // console.log(event);
+    wx.setStorageSync('goods',this.data.goods)
+    wx.setStorageSync('store', this.data.store)
+    wx.navigateTo({
+      url: '../to-pay-order/index',
+    })
+  },
+  storeDetail: function (e) {
+    var id = e.currentTarget.dataset.id;
+    wx.navigateTo({
+      url: "/pages/store/store?id=" + id
     })
   },
 
@@ -109,12 +116,6 @@ Page({
       }
     })
   },
-  onPullDownRefresh: function () {
-    // Do something when pull down.
-    wx.stopPullDownRefresh();
-    console.log('刷新');
-    // this.onLoad();
 
-  },
 
 })

@@ -36,7 +36,7 @@
             <text>返   {{good.goldprice}}</text>
           </view>
         </view>
-        <view class='arrow'>已售{{good.selled}}
+        <view class='arrow'>
           <image src="../../images/arrow_left.png"></image>
         </view>
       </view>

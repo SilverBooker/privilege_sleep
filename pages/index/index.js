@@ -1,5 +1,6 @@
 
 var app = getApp();
+
 Page({
   data: {
     storelist: [
@@ -29,5 +30,21 @@ Page({
     this.onLoad();
     wx.stopPullDownRefresh();
   },
+  formSubmit: function (e) {
 
+    var that = this;
+      var model = JSON.stringify(e.detail.value)
+      if (e.detail.value.searchname.length==0) {
+        this.setData({
+          tip: '提示：搜索不能为空！',
+
+          })
+          }else{
+        wx.redirectTo({
+          url: '../search/search?model=' + model,
+        })
+        }
+  },
+
+  
 })

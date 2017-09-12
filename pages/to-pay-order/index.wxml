@@ -1,0 +1,41 @@
+<view class="container">
+  <form bindsubmit="createOrder">
+    <view class="goods-list">
+      <view class="list-title">{{store.name}}</view>
+      <view class="a-goods">
+        <view class="img-box">
+          <image src="{{goods.gphoto}}" class="img" />
+        </view>
+        <view class="text-box">
+          <view class="arow arow01">
+            <view class="goods-name">{{goods.gname}}</view>
+            <view class="goods-price">¥ {{goods.gprice}}</view>
+          </view>
+          <view class="arow">
+            <view class="goods-label">{{store.address}}</view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="peisong-way">
+      <view class="row-box">
+        <view class="row-label">备注 </view>
+        <view class="right-text">
+          <input name="remark" type="text" class="liuyan" placeholder="如需备注请输入" />
+        </view>
+      </view>
+    </view>
+    <view class="goods-info">
+      <view class="row-box">
+        <view class="row-label">返利金额</view>
+        <view class="right-text">¥ {{goods.goldprice}}</view>
+      </view>
+    </view>
+    <view class="jiesuan-box">
+      <view class="left-price">
+        <view class="total">预付押金 ￥0</view>
+      </view>
+      <button class="to-pay-btn" formType="submit">提交订单</button>
+    </view>
+  </form>
+</view>

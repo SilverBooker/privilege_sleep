@@ -1,0 +1,8 @@
+<view class="formstyle">
+  <form bindsubmit="formSubmit" bindreset="formReset">
+
+    <view class="tixian">当前身份证号码· {{idDetail.idcard}}</view>
+<input class="idname" type="idcard" name="idname" placeholder="请输入要绑定的身份证号" confirm-type="done"/>
+  <button class="button_a" formType="submit">确认修改</button>
+  </form>
+  </view>

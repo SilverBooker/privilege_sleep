@@ -1,0 +1,33 @@
+<import src='../../components/star/star.wxml' />
+<import src='../../components/storeitem/storeitem.wxml' />
+<view class="container">
+  <form bindsubmit="formSubmit">
+    <view class="search flex-wrp">
+
+      <view class="search-left ">
+        <input placeholder="搜索酒店" placeholder-class="search-placeholder" name="searchname" />
+      </view>
+      <button class="search-right " formType="submit">
+        <image src="../../images/lighting.png"></image>
+      </button>
+
+    </view>
+  </form>
+  <loading hidden="{{!loading}}">
+    {{title}}
+  </loading>
+
+
+
+  <scroll-view class='scroller' style="width:{{width}}px;" bindscrolltoupper="upper" scroll-y="true" lower-threshold="800">
+    <view wx:for='{{searchlist}}' wx:for-item='store' wx:key='*this'>
+      <template is="store" data="{{store}}" />
+    </view>
+  </scroll-view>
+
+</view>
+<view>
+  <button bindtap="gotoindex" type="warn" class="address-add">
+    回到商店页
+  </button>
+</view>
