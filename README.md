@@ -7,9 +7,11 @@
 |---|---|---
 |E-mail|silver.l.booker@foxmail.com|yangzengkai_me@163.com
 
-![](images/weilogo.png)
 ### 预览
  微信小程序-搜索 惠眠酒店促销
+ 
+ ![](images/weilogo.png)
+ 
 ### description
 - _用途_ : 使用本程序获得酒店返利资格以得到价格上的优惠
 - _工具_ : [微信 web 开发者工具](https://mp.weixin.qq.com/debug/wxadoc/dev/devtools/download.html?t=1477579747265)
