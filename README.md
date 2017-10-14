@@ -2,13 +2,10 @@
 
 微信小程序--惠眠酒店促销
 
-|Author|SilverBooker|
+|Author|SilverBooker|CodeeYang
 |---|---
-|E-mail|silver.l.bell@qq.com
+|E-mail|silver.l.booker@foxmail.com|yangzengkai_me@163.com
 
-|Author|CodeeYang|
-|---|---
-|E-mail|yangzengkai_me@163.com
 
 ![](images/weilogo.png)
 
