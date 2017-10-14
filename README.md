@@ -2,6 +2,7 @@
 
 微信小程序--惠眠酒店促销
 
+![](images/weilogo.png)
 ====
 
 ### description
