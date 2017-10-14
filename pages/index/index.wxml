@@ -19,8 +19,6 @@
     {{title}}
   </loading>
 
-
-
     <scroll-view   class='scroller' style="width:{{width}}px;" bindscrolltoupper="upper" scroll-y="true" lower-threshold="800" >
       <view wx:for='{{storelist}}' wx:for-item='store' wx:key='*this'>
         <template is="store" data="{{store}}" />
@@ -28,6 +26,3 @@
     </scroll-view>
 
  </view> 
-
-
-

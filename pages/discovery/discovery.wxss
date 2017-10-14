@@ -53,7 +53,7 @@ flex-wrap: nowrap;
     margin-top: 26rpx;
 }
 .goods .good .info .price text{
-color: #ff3333;
+color: #ff6633;
 font-size: 45rpx;
 
 }

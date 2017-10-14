@@ -62,6 +62,7 @@
 .my .my-item:last-child .myitem-name{
   border-bottom: none;
 }
+
 button::after{
   content:" ";
   width:200%;

@@ -16,6 +16,7 @@
 }
 .flex-wrp{
   display: flex;
+
 }
 .flex-tab{
   flex-flow: row nowrap;
