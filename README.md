@@ -7,9 +7,7 @@
 |---|---|---
 |E-mail|silver.l.booker@foxmail.com|yangzengkai_me@163.com
 
-
 ![](images/weilogo.png)
-
 
 ### description
 - _用途_ : 使用本程序获得酒店返利资格以得到价格上的优惠
