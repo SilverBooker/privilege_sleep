@@ -1,6 +1,7 @@
 # privilege_sleep
 
 微信小程序--惠眠酒店促销
+====
 
 |Author|SilverBooker|CodeeYang|
 |---|---|---
@@ -9,7 +10,6 @@
 
 ![](images/weilogo.png)
 
-====
 
 ### description
 - _用途_ : 使用本程序获得酒店返利资格以得到价格上的优惠
